@@ -15,6 +15,8 @@ function TaskCreate({ onCreate }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     onCreate(title, taskDesc);
+    setTitle("");
+    setTaskDesk("");
   };
 
   return (
