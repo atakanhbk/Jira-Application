@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TaskCreate() {
+function TaskCreate({ onCreate }) {
   const [title, setTitle] = useState("");
   const [taskDesc, setTaskDesk] = useState("");
 
@@ -9,10 +9,13 @@ function TaskCreate() {
   };
 
   const handleTaskChange = (event) => {
-    setTaskDesk(event.target.value); 
+    setTaskDesk(event.target.value);
   };
 
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onCreate(title, taskDesc);
+  };
 
   return (
     <div className="task-create">
@@ -27,7 +30,9 @@ function TaskCreate() {
           onChange={handleTaskChange}
           rows={5}
         />
-        <button className="task-button">Create</button>
+        <button className="task-button" onClick={handleSubmit}>
+          Create
+        </button>
       </form>
     </div>
   );
