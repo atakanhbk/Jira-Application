@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function TaskCreate({ onCreate, task, taskFormUpdate }) {
-  const [title, setTitle] = useState("");
-  const [taskDesc, setTaskDesk] = useState("");
+  const [title, setTitle] = useState(task ? task.title : "");
+  const [taskDesc, setTaskDesk] = useState(task ? task.taskDesc : "");
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -19,10 +19,12 @@ function TaskCreate({ onCreate, task, taskFormUpdate }) {
     setTaskDesk("");
   };
 
+
   return (
     <div>
       {taskFormUpdate ? (
         <div className="task-update">
+          
           <h3>Please Edit The Task !!!</h3>
           <form className="task-form">
             <label className="task-label">Edit Your Title</label>
@@ -38,8 +40,11 @@ function TaskCreate({ onCreate, task, taskFormUpdate }) {
               onChange={handleTaskChange}
               rows={5}
             />
-            <button className="task-button update-button" onClick={handleSubmit}>
-              Edit
+            <button
+              className="task-button update-button"
+              onClick={handleSubmit}
+            >
+              Complete
             </button>
           </form>
         </div>

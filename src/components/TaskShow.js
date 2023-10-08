@@ -10,6 +10,8 @@ function TaskShow({ task, onDelete }) {
 
   const handleEditClick = () => {
     setShowEdit(!showEdit);
+    console.log(task.title);
+    console.log(task.taskDesc);
   };
   return (
     <div className="task-show">
