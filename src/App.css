@@ -51,3 +51,30 @@
   align-items: center;
   margin: 20px;
 }
+
+.task-title{
+  margin-bottom: 5px;
+}
+
+.task-edit{
+  padding: 5px;
+  font-size: 15px;
+  width: 100px;
+  border: none;
+  border-radius: 30px;
+  background-color: blue;
+  color: white;
+  margin-right: 10px;
+}
+
+
+.task-delete{
+  padding: 5px;
+  font-size: 15px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  margin-right: 10px;
+}
