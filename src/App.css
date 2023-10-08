@@ -34,3 +34,20 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+.task-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.task-show {
+  border: 1px solid green;
+  border-radius: 30px;
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
