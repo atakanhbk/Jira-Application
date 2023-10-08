@@ -16,7 +16,7 @@ function TaskCreate({ onCreate }) {
     event.preventDefault();
     onCreate(title, taskDesc);
     setTitle("");
-    setTaskDesk(""); 
+    setTaskDesk("");
   };
 
   return (
