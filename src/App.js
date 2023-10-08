@@ -7,7 +7,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const createTask = (title, taskDesc) => {
-    const createdTasks = [
+    const createTask = [
       ...tasks,
       {
         id: Math.round(Math.random() * 999999),
