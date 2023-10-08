@@ -19,14 +19,21 @@ function App() {
     setTasks(createTask);
   };
 
-  const handleOnUpdate = (id, title, titleDesc) => {
-    console.log(id, title, titleDesc);
-  };
-
   const deleteTaskById = (id) => {
     const afterDeletingTasks = tasks.filter((task) => task.id !== id);
     setTasks(afterDeletingTasks);
   };
+
+  const editTaskById = (id, updatedTitle, updatedTaskDesc) => {
+    const updatedTask = tasks.map((task) => {
+      if (task.id === id) {
+        return {id,title:updatedTitle,taskDesc:updatedTaskDesc}
+      }
+      return task;
+    });
+    setTasks(updatedTask);
+  };
+
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
@@ -34,7 +41,7 @@ function App() {
       <TaskList
         tasks={tasks}
         onDelete={deleteTaskById}
-        onUpdate={handleOnUpdate}
+        onUpdate={editTaskById}
       />
     </div>
   );
