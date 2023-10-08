@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
-      <h1>Görevler</h1>
+      <h1>All Tasks</h1>
       <TaskList tasks={tasks}/>
     </div>
   );
