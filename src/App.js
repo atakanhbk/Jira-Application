@@ -19,6 +19,10 @@ function App() {
     setTasks(createTask);
   };
 
+  const handleOnUpdate = (id, title, titleDesc) => {
+    console.log(id, title, titleDesc);
+  };
+
   const deleteTaskById = (id) => {
     const afterDeletingTasks = tasks.filter((task) => task.id !== id);
     setTasks(afterDeletingTasks);
@@ -27,7 +31,11 @@ function App() {
     <div className="App">
       <TaskCreate onCreate={createTask} />
       <h1>All Tasks</h1>
-      <TaskList tasks={tasks} onDelete={deleteTaskById} />
+      <TaskList
+        tasks={tasks}
+        onDelete={deleteTaskById}
+        onUpdate={handleOnUpdate}
+      />
     </div>
   );
 }
