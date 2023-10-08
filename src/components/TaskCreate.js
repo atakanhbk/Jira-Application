@@ -16,7 +16,7 @@ function TaskCreate({ onCreate, task, taskFormUpdate,onUpdate }) {
     event.preventDefault();
 
     if (taskFormUpdate) {
-      onUpdate(task.id,task.title,task.taskDesc)
+      onUpdate(task.id,title,taskDesc)
     } else {
         onCreate(title, taskDesc);
     }

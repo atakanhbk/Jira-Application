@@ -25,13 +25,13 @@ function App() {
   };
 
   const editTaskById = (id, updatedTitle, updatedTaskDesc) => {
-    const updatedTask = tasks.map((task) => {
+    const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
-        return {id,title:updatedTitle,taskDesc:updatedTaskDesc}
+        return { id, title: updatedTitle, taskDesc: updatedTaskDesc };
       }
       return task;
     });
-    setTasks(updatedTask);
+    setTasks(updatedTasks);
   };
 
   return (

@@ -12,9 +12,9 @@ function TaskShow({ task, onDelete ,onUpdate }) {
     setShowEdit(!showEdit);
   };
 
-  const handleSubmit = (id,updatedTitle,updatedTaskDesc) => {
+  const handleSubmit = (id, updatedTitle, updatedTaskDesc) => {
     setShowEdit(false);
-    onUpdate(id,updatedTitle,updatedTaskDesc);
+    onUpdate(id, updatedTitle, updatedTaskDesc);
   };
   return (
     <div className="task-show">
